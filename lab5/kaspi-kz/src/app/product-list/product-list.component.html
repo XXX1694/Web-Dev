@@ -1,0 +1,9 @@
+<div class="product-list">
+  <app-product-item
+    *NgFor="let product of products"
+    [product]="product"
+    (remove)="removeProduct($event)"
+    (like)="updateLikes($event)"
+  >
+  </app-product-item>
+</div>

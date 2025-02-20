@@ -1,0 +1,24 @@
+<div class="product-item">
+  <div class="product-header">
+    <img [src]="product.image" alt="{{ product.name }}" />
+    <h3>{{ product.name }}</h3>
+  </div>
+  <div class="product-body">
+    <p>{{ product.description }}</p>
+    <p>Rating: {{ product.rating }}</p>
+    <p>Likes: {{ product.likes }}</p>
+    <div class="gallery">
+      <img
+        *NgFor="let img of product.images"
+        [src]="img"
+        alt="{{ product.name }} image"
+      />
+    </div>
+  </div>
+  <div class="product-actions">
+    <button (click)="share(product, 'whatsapp')">Share on Whatsapp</button>
+    <button (click)="share(product, 'telegram')">Share on Telegram</button>
+    <button (click)="onLike()">Like</button>
+    <button (click)="onRemove()">Remove</button>
+  </div>
+</div>
