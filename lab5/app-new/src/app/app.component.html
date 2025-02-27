@@ -1,0 +1,7 @@
+<div class="container">
+  <app-category-list
+    (categorySelected)="selectedCategory = $event"
+  ></app-category-list>
+  <h2 class="category-title">Category: {{ selectedCategory }}</h2>
+  <app-product-list [category]="selectedCategory"></app-product-list>
+</div>
