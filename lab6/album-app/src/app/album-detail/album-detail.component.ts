@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './album-detail.component.html',
-  styleUrl: './album-detail.component.css',
+  styleUrls: ['./album-detail.component.css'],
 })
 export class AlbumDetailComponent implements OnInit {
   album: any;

@@ -1,4 +1,13 @@
 <h1>Albums</h1>
+<button (click)="toggleCreateForm()" class="create-btn">
+  {{ showCreateForm ? "Cancel" : "Create Album" }}
+</button>
+
+<div *ngIf="showCreateForm" class="create-form">
+  <input [(ngModel)]="newAlbumTitle" placeholder="Enter album title" />
+  <button (click)="createAlbum()">Add Album</button>
+</div>
+
 <div *ngFor="let album of albums">
   <span (click)="goToDetail(album.id)">{{ album.title }}</span>
   <button (click)="deleteAlbum(album.id)">Delete</button>
